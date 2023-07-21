@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smartphone</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      class="modal fade fs-2"
+      id="callLogModal1"
+      tabindex="-1"
+      aria-labelledby="callLogModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title text-center" id="callLogModalLabel">
+              Calls List
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="callLogModalBody1">
+            <!-- registro delle chiamate -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modale interfaccia 2 -->
+    <div
+      class="modal fade fs-2"
+      id="callLogModal2"
+      tabindex="-1"
+      aria-labelledby="callLogModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title text-center" id="callLogModalLabel">
+              Calls List
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="callLogModalBody2">
+            <!-- registro delle chiamate -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale interfaccia 3  -->
+    <div
+      class="modal fade fs-2"
+      id="callLogModal3"
+      tabindex="-1"
+      aria-labelledby="callLogModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title text-center" id="callLogModalLabel">
+              Calls List
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="callLogModalBody3">
+            <!-- registro delle chiamate -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mega-container">
+      <div class="codec" id="call-animation">
+        <div class="left">
+          <div class="screen"></div>
+        </div>
+        <div class="center">
+          <div class="ptt">PTT</div>
+          <div class="frequency">
+            <div class="bars">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="lcd">
+              <span class="small">88</span><span class="large">8</span
+              ><span class="large">88</span>
+            </div>
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
+          <div class="memory">MEMORY</div>
+        </div>
+        <div class="right">
+          <div class="screen"></div>
+        </div>
+        <div class="chat">
+          I can't believe I'm being hit on by the famous Solid Snake...
+        </div>
+      </div>
+      <div class="d-flex">
+        <div id="interface1" class="chat2 container-fluid">
+          <div class="text-center ma">
+            <h2>Solid Snake</h2>
+          </div>
+          <div class="mt-5 chat2">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center my-4"
+            >
+              <form id="phoneForm1">
+                <label for="charge1" class="fs-2">Recharge $:</label>
+                <input type="number" id="charge1" />
+              </form>
+              <div>
+                <button
+                  type="button"
+                  id="rechargeButton1"
+                  class="btn-codec m-4"
+                >
+                  Recharge
+                </button>
+                <button id="showBalance1" class="btn-codec m-4">
+                  Show Balance
+                </button>
+              </div>
+              <div id="balanceDisplay1"></div>
+            </div>
+            <div>
+              <div class="container-fluid d-flex flex-column">
+                <div
+                  class="d-flex align-items-center justify-content-center my-4"
+                >
+                  <label for="talk1" class="fs-2 me-4">Talk Time:</label>
+                  <form
+                    id="callForm1"
+                    class="d-flex flex-column align-items-center justify-content-center"
+                  >
+                    <input type="number" id="callMinutes1" />
+                  </form>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <button id="contactMeiLingButton1" class="btn-codec m-4">
+                    Contact Mei Ling
+                  </button>
+                  <button id="showCalls1" class="btn-codec m-4">
+                    Show Calls Amount
+                  </button>
+                  <button id="resetCalls1" class="btn-codec m-4">
+                    Erase List
+                  </button>
+                </div>
+              </div>
+              <h4 class="text-center mt-5 fs-2">Calls List</h4>
+              <div class="text-center">
+                <button id="showAllCalls1" class="btn-codec">
+                  Show Calls List
+                </button>
+              </div>
+              <div id="callsDisplay1" class="text-center my-4"></div>
+              <div id="callLog1"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interfaccia 2 -->
+        <div id="interface2" class="chat2 container-fluid">
+          <div class="text-center ma">
+            <h2>Col. Campbell</h2>
+          </div>
+          <div class="mt-5 chat2">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center my-4"
+            >
+              <form id="phoneForm2">
+                <label for="charge2" class="fs-2">Recharge $:</label>
+                <input type="number" id="charge2" />
+              </form>
+              <div>
+                <button
+                  type="button"
+                  id="rechargeButton2"
+                  class="btn-codec m-4"
+                >
+                  Recharge
+                </button>
+                <button id="showBalance2" class="btn-codec m-4">
+                  Show Balance
+                </button>
+              </div>
+              <div id="balanceDisplay2"></div>
+            </div>
+            <div>
+              <div class="container-fluid d-flex flex-column">
+                <div
+                  class="d-flex align-items-center justify-content-center my-4"
+                >
+                  <label for="talk2" class="fs-2 me-4">Talk Time:</label>
+                  <form
+                    id="callForm2"
+                    class="d-flex flex-column align-items-center justify-content-center"
+                  >
+                    <input type="number" id="callMinutes2" />
+                  </form>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <button id="contactMeiLingButton2" class="btn-codec m-4">
+                    Contact Solid Snake
+                  </button>
+                  <button id="showCalls2" class="btn-codec m-4">
+                    Show Calls Amount
+                  </button>
+                  <button id="resetCalls2" class="btn-codec m-4">
+                    Erase List
+                  </button>
+                </div>
+              </div>
+              <h4 class="text-center mt-5 fs-2">Calls List</h4>
+              <div class="text-center">
+                <button id="showAllCalls2" class="btn-codec">
+                  Show Calls List
+                </button>
+              </div>
+              <div id="callsDisplay2" class="text-center my-4"></div>
+              <div id="callLogModalBody2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interfaccia 3 -->
+        <div id="interface3" class="chat2 container-fluid">
+          <div class="text-center ma">
+            <h2>Mei Ling</h2>
+          </div>
+          <div class="mt-5 chat2">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center my-4"
+            >
+              <form id="phoneForm3">
+                <label for="charge3" class="fs-2">Recharge $:</label>
+                <input type="number" id="charge3" />
+              </form>
+              <div>
+                <button
+                  type="button"
+                  id="rechargeButton3"
+                  class="btn-codec m-4"
+                >
+                  Recharge
+                </button>
+                <button id="showBalance3" class="btn-codec m-4">
+                  Show Balance
+                </button>
+              </div>
+              <div id="balanceDisplay3"></div>
+            </div>
+            <div>
+              <div class="container-fluid d-flex flex-column">
+                <div
+                  class="d-flex align-items-center justify-content-center my-4"
+                >
+                  <label for="talk3" class="fs-2 me-4">Talk Time:</label>
+                  <form
+                    id="callForm3"
+                    class="d-flex flex-column align-items-center justify-content-center"
+                  >
+                    <input type="number" id="callMinutes3" />
+                  </form>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <button id="contactMeiLingButton3" class="btn-codec m-4">
+                    Contact Col Campbell
+                  </button>
+                  <button id="showCalls3" class="btn-codec m-4">
+                    Show Calls Amount
+                  </button>
+                  <button id="resetCalls3" class="btn-codec m-4">
+                    Erase List
+                  </button>
+                </div>
+              </div>
+              <h4 class="text-center mt-5 fs-2">Calls List</h4>
+              <div class="text-center">
+                <button id="showAllCalls3" class="btn-codec">
+                  Show Calls List
+                </button>
+              </div>
+              <div id="callsDisplay3" class="text-center my-4"></div>
+              <div id="callLog3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

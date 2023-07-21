@@ -1,127 +1,5 @@
 "use strict";
-// class Smartphone {
-//   carica: number;
-//   numeroChiamate: number;
-//   costoMinuto: number;
-//   registroChiamate: { id: number; durata: number; dateTime: string }[];
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2;
-//   constructor() {
-//     this.carica = 0;
-//     this.numeroChiamate = 0;
-//     this.costoMinuto = 0.20;
-//     this.registroChiamate = [];
-//   }
-//   ricarica(euro: number): void {
-//     this.carica += euro;
-//     console.log(`Credito residuo: €${this.carica.toFixed(2)}`);
-//   }
-//   numero404(): void {
-//     console.log(`Credito residuo: €${this.carica.toFixed(2)}`);
-//   }
-//   getNumeroChiamate(): number {
-//     console.log(`Numero di chiamate effettuate: ${this.numeroChiamate}`);
-//     return this.numeroChiamate;
-//   }
-//   chiamata(min: number): void {
-//     const costoChiamata = min * this.costoMinuto;
-//     if (costoChiamata > this.carica) {
-//       alert("Low funds! GO LOOT.");
-//       return;
-//     }
-//     this.carica -= costoChiamata;
-//     this.numeroChiamate++;
-//     console.log(`Chiamata effettuata per ${min} minuti. Costo: €${costoChiamata.toFixed(2)}.`);
-//     this.registroChiamate.push({
-//       id: this.numeroChiamate,
-//       durata: min,
-//       dateTime: new Date().toISOString(),
-//     });
-//   }
-//   azzeraChiamate(): void {
-//     this.numeroChiamate = 0;
-//     console.log("Contatore delle chiamate azzerato.");
-//   }
-//   mostraRegistroChiamate(): void {
-//     console.log("Registro delle chiamate:");
-//     this.registroChiamate.forEach((call) => {
-//       console.log(`ID: ${call.id}, Durata: ${call.durata} minuti, Data/Ora: ${call.dateTime}`);
-//     });
-//   }
-// }
-// const phone = new Smartphone();
-// document.getElementById("phoneForm").addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   const chargeInput = document.getElementById("charge") as HTMLInputElement;
-//   const euro = parseFloat(chargeInput.value);
-//   phone.ricarica(euro);
-//   updateBalanceDisplay();
-//   chargeInput.value = "";
-// });
-// document.getElementById("rechargeButton").addEventListener("click", () => {
-//   const chargeInput = document.getElementById("charge") as HTMLInputElement;
-//   const euro = parseFloat(chargeInput.value);
-//   phone.ricarica(euro);
-//   updateBalanceDisplay();
-//   chargeInput.value = "";
-// });
-// document.getElementById("showBalance").addEventListener("click", () => {
-//   phone.numero404();
-//   updateBalanceDisplay();
-// });
-// document.getElementById("callForm").addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   const callMinutesInput = document.getElementById("callMinutes") as HTMLInputElement;
-//   const minutes = parseInt(callMinutesInput.value);
-//   phone.chiamata(minutes);
-//   updateBalanceDisplay();
-//   updateCallsDisplay();
-//   callMinutesInput.value = "";
-// });
-// document.getElementById("showCalls").addEventListener("click", () => {
-//   phone.getNumeroChiamate();
-//   updateCallsDisplay();
-// });
-// document.getElementById("resetCalls").addEventListener("click", () => {
-//   phone.azzeraChiamate();
-//   updateCallsDisplay();
-//   updateCallLogModal(); // Aggiorna il modale azzerando la lista delle chiamate
-// });
-// document.getElementById("contactMeiLingButton").addEventListener("click", () => {
-//   const callDurationInput = document.getElementById("callMinutes") as HTMLInputElement;
-//   const minutes = parseInt(callDurationInput.value);
-//   phone.chiamata(minutes);
-//   updateBalanceDisplay();
-//   updateCallsDisplay();
-//   updateCallLogModal(); // Aggiorna il modale aggiungendo l'ultima chiamata alla lista
-//   callDurationInput.value = "";
-// });
-// document.getElementById("showAllCalls").addEventListener("click", () => {
-//   phone.mostraRegistroChiamate();
-//   updateCallLogModal();
-//   const callLogModal = new bootstrap.Modal(document.getElementById("callLogModal"));
-//   callLogModal.show();
-// });
-// document.getElementById("callLogModal").addEventListener("hidden.bs.modal", () => {
-//   const callLogModalBody = document.getElementById("callLogModalBody") as HTMLElement;
-//   callLogModalBody.innerHTML = ""; // Pulisce il contenuto del modale quando viene chiuso
-// });
-// function updateBalanceDisplay(): void {
-//   const balanceDisplay = document.getElementById("balanceDisplay") as HTMLElement;
-//   balanceDisplay.textContent = `Funds: €${phone.carica.toFixed(2)}`;
-// }
-// function updateCallsDisplay(): void {
-//   const callsDisplay = document.getElementById("callsDisplay") as HTMLElement;
-//   callsDisplay.textContent = `Calls Amount: ${phone.numeroChiamate}`;
-// }
-// function updateCallLogModal(): void {
-//   const callLogModalBody = document.getElementById("callLogModalBody") as HTMLElement;
-//   callLogModalBody.innerHTML = "";
-//   phone.registroChiamate.forEach((call) => {
-//     const callInfo = document.createElement("p");
-//     callInfo.textContent = `ID: ${call.id}, Durata: ${call.durata} minuti, Data/Ora: ${call.dateTime}`;
-//     callLogModalBody.appendChild(callInfo);
-//   });
-// }
 class Smartphone {
     constructor() {
         this.carica = 0;
@@ -131,10 +9,10 @@ class Smartphone {
     }
     ricarica(euro) {
         this.carica += euro;
-        console.log(`Credito residuo: €${this.carica.toFixed(2)}`);
+        console.log(`Credito residuo: $${this.carica.toFixed(2)}`);
     }
     numero404() {
-        console.log(`Credito residuo: €${this.carica.toFixed(2)}`);
+        console.log(`Credito residuo: $${this.carica.toFixed(2)}`);
     }
     getNumeroChiamate() {
         console.log(`Numero di chiamate effettuate: ${this.numeroChiamate}`);
@@ -148,7 +26,7 @@ class Smartphone {
         }
         this.carica -= costoChiamata;
         this.numeroChiamate++;
-        console.log(`Chiamata effettuata per ${min} minuti. Costo: €${costoChiamata.toFixed(2)}.`);
+        console.log(`Chiamata effettuata per ${min} minuti. Costo: $${costoChiamata.toFixed(2)}.`);
         this.registroChiamate.push({
             id: this.numeroChiamate,
             durata: min,
@@ -225,7 +103,7 @@ const phone1 = new Smartphone();
 });
 function updateBalanceDisplay() {
     const balanceDisplay = document.getElementById("balanceDisplay1");
-    balanceDisplay.textContent = `Funds: €${phone1.carica.toFixed(2)}`;
+    balanceDisplay.textContent = `Funds: $${phone1.carica.toFixed(2)}`;
 }
 function updateCallsDisplay() {
     const callsDisplay = document.getElementById("callsDisplay1");
@@ -300,7 +178,7 @@ const phone2 = new Smartphone();
 });
 function updateBalanceDisplay2() {
     const balanceDisplay = document.getElementById("balanceDisplay2");
-    balanceDisplay.textContent = `Funds: €${phone2.carica.toFixed(2)}`;
+    balanceDisplay.textContent = `Funds: $${phone2.carica.toFixed(2)}`;
 }
 function updateCallsDisplay2() {
     const callsDisplay = document.getElementById("callsDisplay2");
@@ -375,7 +253,7 @@ const phone3 = new Smartphone();
 });
 function updateBalanceDisplay3() {
     const balanceDisplay = document.getElementById("balanceDisplay3");
-    balanceDisplay.textContent = `Funds: €${phone3.carica.toFixed(2)}`;
+    balanceDisplay.textContent = `Funds: $${phone3.carica.toFixed(2)}`;
 }
 function updateCallsDisplay3() {
     const callsDisplay = document.getElementById("callsDisplay3");
